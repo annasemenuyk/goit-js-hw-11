@@ -22,7 +22,7 @@ input {
   padding: 7px;
   margin-right: 15px;
   border-radius: 3px;
-  border: 1px solid #491607;
+  border: 1px solid #6aca25;
   font-weight: 500;
   font-size: 20px;
   color: #000000;
@@ -30,19 +30,19 @@ input {
 
 input:hover,
 input:focus {
-  border-color: #491607;
-  box-shadow: 2px 1px 5px #491607;
+  border-color: #102caa;
+  box-shadow: 2px 1px 5px #150749;
 }
 
 button {
-  color: #491607;
+  color: #32b9db;
   background-color: #55f3b1;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 3px;
-  border: 1px solid #491607;
+  border: 1px solid #035c21;
   font-weight: 500;
   font-size: 25px;
   text-transform: uppercase;
@@ -76,10 +76,9 @@ button:hover {
   margin: 15px;
   height: 100%;
   width: 100%;
-  box-shadow: 2px 3px 7px #491607;
+  box-shadow: 2px 3px 7px #0e0749;
   object-fit: cover;
   text-align: center;
-  animation: myMove 5s infinite;
 }
 
 .info-list {
@@ -102,20 +101,18 @@ button:hover {
 .gallery__image {
   height: 240px;
   object-fit: cover;
-  transition: transform var(--animation-duration) var(--timing-function);
-  animation: myAnimation 7s infinite;
 }
 
 .search-form {
   position: sticky;
   top: -1px;
   margin: 0;
-  padding: 8px;
-  background-color: #f55b2d;
+  padding: 4px;
+  background-color: #66d8ec;
   text-align: center;
   text-transform: uppercase;
   z-index: 999;
-  box-shadow: 2px 3px 7px #491607;
+  box-shadow: 2px 3px 7px #074938;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,16 +130,3 @@ button:hover {
 .button > .spinner.is-hidden {
   display: none;
 }
-
-@keyframes myMove {
-  50% {
-    box-shadow: 10px 20px 30px #f55b2d;
-  }
-}
-
-@keyframes myAnimation {
-  50% {
-    filter: grayscale(100%);
-  }
-}
-/*# sourceMappingURL=main.css.map */
