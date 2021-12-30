@@ -1,5 +1,5 @@
 import photoCard from '../templates/cards.hbs'
-import '../sass/main.scss';
+import '../sass/main.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import NewsApiService from './axiosGallery.js'; 
@@ -9,9 +9,9 @@ import LoadMoreBtn from './loading.js';
 
 const refs = {
     searchForm: document.getElementById('search-form'),
-    searchQueryInput: document.querySelector('[name="searchQuery"]'),
+    searchInput: document.querySelector('[name="searchQuery"]'),
     buttonSubmit: document.querySelector('[type="submit"]'),
-    galleryContainer: document.querySelector('.gallery'),
+    galleryCards: document.querySelector('.gallery'),
 }
 
 const newsApiService = new NewsApiService();
@@ -27,7 +27,7 @@ loadMoreBtn.refs.button.addEventListener('click', onLoadMore);
 
 function onSearchForm(e) {
     e.preventDefault();
-    newsApiService.query = refs.searchQueryInput.value.trim();
+    newsApiService.query = refs.searchInput.value.trim();
     newsApiService.resetPage();
     console.log(newsApiService.page)
     if (newsApiService === '') {
@@ -60,7 +60,7 @@ function onSearchForm(e) {
 async function appendPhotosMarkup(photos) {
     const markup = await photoCard(photos.hits);
 
-    refs.galleryContainer.insertAdjacentHTML("beforeend", markup);
+    refs.galleryCards.insertAdjacentHTML("beforeend", markup);
     if (photos.hits.length < 40 && photos.hits.length >= 1) {
          onFetchInfo();
          loadMoreBtn.hide();   
@@ -88,7 +88,7 @@ function onLoadMore() {
 }
 
 function clearPhotosContainer() {
-    refs.galleryContainer.innerHTML = '';
+    refs.galleryCards.innerHTML = '';
 }
 
 function onFetchError() {

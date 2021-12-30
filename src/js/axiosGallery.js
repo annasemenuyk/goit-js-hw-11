@@ -1,20 +1,3 @@
-// export const axiosGallery = name => {
-//   const axios = require('axios');
-
-//   // Make a request for a user with a given ID
-//   axios.get('/user?ID=24875841-80f192125ca760fadc7a056b3')
-//     .then(function (response) {
-//       // handle success
-//       console.log(response);
-//     })
-//     .catch(function (error) {
-//       // handle error
-//       console.log(error);
-//     })
-//     .then(function () {
-//       // always executed
-//     })
-//   }
   import axios from "axios";
 
   const API_KEY = '24875841-80f192125ca760fadc7a056b3';
